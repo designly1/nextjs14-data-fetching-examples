@@ -2,26 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.angled-div {
+	position: fixed;
+	width: 200px;
+	height: 200px;
+	top: -100px;
+	right: -100px;
+	background-color: #3498db;
+	color: white;
+	text-align: center;
+	box-sizing: border-box;
+	transform: rotate(-45deg);
+	cursor: pointer;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.angled-div > div {
+	transform: rotate(45deg);
+	position: absolute;
+	padding: 5px;
+	top: 32%;
 }
